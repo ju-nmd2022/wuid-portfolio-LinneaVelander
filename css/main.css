@@ -6,11 +6,36 @@ h1 {
   color: #ffffff;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-size: 70px;
+  font-size: 4rem;
   text-align: center;
   background-color: #afe1af;
-  margin: 0px;
-  padding: 10px;
+  margin: 0;
+  padding: 1rem;
+}
+
+.topnav {
+  background-color: #e1afc8;
+  padding: 0.5rem;
+}
+
+.topnav a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-align: left;
+  color: #e4e2e2;
+  margin: 1rem;
+  text-decoration: none;
+  transition: ease-in-out 200ms;
+}
+
+.topnav a:hover {
+  color: #ffffff;
+  cursor: pointer;
+  transition: ease-in-out 200ms;
+}
+
+.topnav a.active {
+  color: #ffffff;
 }
 
 .column {
@@ -23,7 +48,7 @@ h2 {
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
   font-weight: normal;
-  color: #e1afaf;
+  color: #e1afc8;
   text-align: left;
   margin-top: 35px;
   padding: 0px 30px;
@@ -41,16 +66,6 @@ p {
 .left {
   background-color: #afafe1;
   padding-bottom: 90px;
-}
-
-a {
-  font-family: "Times New Roman", Times, serif;
-  color: #afafe1;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #000000;
 }
 
 .left img {

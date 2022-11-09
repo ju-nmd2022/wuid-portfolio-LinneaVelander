@@ -1,0 +1,266 @@
+html,
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 10rem 1fr 5%;
+  grid-template-areas:
+    "header header header"
+    ". content ."
+    "footer footer footer";
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4rem;
+  color: #ffffff;
+  text-align: center;
+  background-color: #eb87bf;
+  margin: 0;
+  padding: 1rem;
+}
+
+.topnav {
+  background-color: #b387eb;
+  padding: 0.5rem;
+}
+
+.topnav a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-align: left;
+  color: #e4e2e2;
+  margin: 1rem;
+  text-decoration: none;
+  transition: ease-in-out 200ms;
+}
+
+.topnav a:hover {
+  color: #ffffff;
+  cursor: pointer;
+  transition: ease-in-out 200ms;
+}
+
+.topnav a.active {
+  color: #ffffff;
+}
+
+#close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #b387eb;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #b387eb;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+#close:hover {
+  cursor: pointer;
+}
+
+#piglet:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); /* This line of code was adapted from https://codepen.io/sdthornton/details/wBZdXq Accessed: 2022-11-09 */
+  scale: 110%;
+  transition: ease-in-out 200ms;
+}
+
+#details {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+h2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  top: calc(80vh + 0.5rem);
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+#details p {
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  width: 50%;
+  top: calc(80vh + 3rem);
+  position: fixed;
+  left: 25%;
+}
+
+#imageContainer {
+  height: 70%;
+  margin: 0 auto;
+  top: 10vh;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  object-fit: contain;
+}
+
+.content {
+  width: 100%;
+  grid-area: content;
+}
+
+.images {
+  width: 100%;
+  display: grid;
+  margin-top: 1rem;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  align-items: end;
+}
+
+.content img {
+  width: 95%;
+  transition: ease-in-out 200ms;
+}
+
+.column-text {
+  columns: 3;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.footer {
+  background-color: #b387eb;
+  grid-area: footer;
+  margin: 0;
+  margin-top: 0.5rem;
+  height: 3rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #e4e2e2;
+  transition: ease-in-out 200ms;
+}
+
+footer a:hover {
+  color: #ffffff;
+  transition: ease-in-out 200ms;
+}
+
+footer p {
+  color: #e4e2e2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 601px) {
+  .starWars {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+}
+
+@media screen and (min-width: 441px) and (max-width: 600px) {
+  .container {
+    grid-template-rows: 16rem 1fr 5%;
+  }
+
+  .images {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0.2rem;
+  }
+
+  .starWars {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .topnav {
+    display: grid;
+  }
+
+  .topnav a {
+    text-align: center;
+    margin: 0.5rem;
+  }
+
+  #details p {
+    width: calc(100% - 2rem);
+    left: 1rem;
+    right: 1rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .container {
+    grid-template-rows: 16rem 1fr 5%;
+  }
+
+  .images {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    margin-top: 0;
+    row-gap: 2rem;
+  }
+
+  .topnav {
+    display: grid;
+  }
+
+  .topnav a {
+    text-align: center;
+    margin: 0.5rem;
+  }
+
+  h1 {
+    display: grid;
+    font-size: 2em;
+  }
+
+  .footer {
+    height: 7rem;
+  }
+
+  footer p {
+    margin-top: 2rem;
+    display: grid;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  #details p {
+    width: calc(100% - 2rem);
+    left: 1rem;
+    right: 1rem;
+    top: calc(72vh + 2.5rem);
+  }
+
+  #imageContainer {
+    top: 2vh;
+  }
+
+  h2 {
+    top: calc(70vh + 2vh + 0.5rem);
+  }
+}

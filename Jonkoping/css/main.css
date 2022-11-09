@@ -6,11 +6,36 @@ h1 {
   color: #ffffff;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-size: 70px;
+  font-size: 4rem;
   text-align: center;
   background-color: #6bb4fc;
-  margin: 0px;
-  padding: 10px;
+  margin: 0;
+  padding: 1rem;
+}
+
+.topnav {
+  background-color: #6b90fc;
+  padding: 0.5rem;
+}
+
+.topnav a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-align: left;
+  color: #e4e2e2;
+  margin: 1rem;
+  text-decoration: none;
+  transition: ease-in-out 200ms;
+}
+
+.topnav a:hover {
+  color: #ffffff;
+  cursor: pointer;
+  transition: ease-in-out 200ms;
+}
+
+.topnav a.active {
+  color: #ffffff;
 }
 
 .top img {
