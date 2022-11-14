@@ -12,11 +12,11 @@
     <main class="container">
       <div class="header">
         <h1>MY WORKS</h1>
-        <div class="topnav">
+        <nav class="topnav">
           <a class="active" href="Responsive/index3.html">My Works</a>
           <a href="../index.html">About Linnea</a>
           <a href="../Jonkoping/index2.html">About Jönköping</a>
-        </div>
+        </nav>
       </div>
       <div id="details">
         <button id="close">&times;</button>
@@ -29,21 +29,40 @@
         </p>
       </div>
       <div class="content">
-        <div class="images">
-          <img
-            class="southPark"
-            src="images/South Park.jpeg"
-            alt="South Park character"
-          />
-          <img id="piglet" src="images/Piglet.jpeg" alt="Piglet" />
-          <img
-            class="illustration"
-            src="images/Oss.jpg"
-            alt="Lines that represent two persons"
-          />
-          <img class="logo" src="images/Logga.jpeg" alt="A logo" />
-          <img class="starWars" src="images/Figma.png" alt="Figma" />
-        </div>
+        <ul>
+          <li>
+            <img
+              class="southPark"
+              src="images/South Park.jpeg"
+              alt="South Park character"
+            />
+            <h3>Illustrator</h3>
+          </li>
+
+          <li id="pigletContainer">
+            <img id="piglet" src="images/Piglet.jpeg" alt="Piglet" />
+            <h3 class="pigletHeader">Stylization</h3>
+          </li>
+
+          <li>
+            <img
+              class="illustration"
+              src="images/Oss.jpg"
+              alt="Lines that represent two persons"
+            />
+            <h3>Poster</h3>
+          </li>
+
+          <li>
+            <img class="logo" src="images/Logga.jpeg" alt="A logo" />
+            <h3>Brand Logo</h3>
+          </li>
+
+          <li>
+            <img class="starWars" src="images/Figma.png" alt="Figma" />
+            <h3>Figma Streaming</h3>
+          </li>
+        </ul>
       </div>
       <footer class="footer">
         <p>

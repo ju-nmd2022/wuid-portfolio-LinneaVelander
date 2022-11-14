@@ -70,11 +70,15 @@ h1 {
   cursor: pointer;
 }
 
-#piglet:hover {
+#pigletContainer:hover #piglet {
   cursor: pointer;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); /* This line of code was adapted from https://codepen.io/sdthornton/details/wBZdXq Accessed: 2022-11-09 */
-  scale: 110%;
+  scale: 100%;
   transition: ease-in-out 200ms;
+}
+
+#piglet {
+  scale: 90%;
 }
 
 #details {
@@ -126,7 +130,7 @@ h2 {
   grid-area: content;
 }
 
-.images {
+ul {
   width: 100%;
   display: grid;
   margin-top: 1rem;
@@ -135,16 +139,37 @@ h2 {
   column-gap: 2rem;
   row-gap: 2rem;
   align-items: end;
+  list-style-type: none;
+  padding: 0;
+}
+
+#pigletContainer:hover .pigletHeader {
+  cursor: pointer;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); /* This line of code was adapted from https://codepen.io/sdthornton/details/wBZdXq Accessed: 2022-11-09 */
+  scale: 100%;
+  transition: ease-in-out 200ms;
+}
+
+.pigletHeader {
+  transition: ease-in-out 200ms;
+}
+
+li img {
+  scale: 90%;
+}
+
+h3 {
+  color: #eb87bf;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
+  scale: 90%;
 }
 
 .content img {
   width: 95%;
   transition: ease-in-out 200ms;
-}
-
-.column-text {
-  columns: 3;
-  font-family: "Times New Roman", Times, serif;
 }
 
 .footer {
@@ -185,7 +210,7 @@ footer p {
     grid-template-rows: 16rem 1fr 5%;
   }
 
-  .images {
+  ul {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     margin-top: 0.2rem;
@@ -217,7 +242,7 @@ footer p {
     grid-template-rows: 16rem 1fr 5%;
   }
 
-  .images {
+  ul {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     margin-top: 0;
